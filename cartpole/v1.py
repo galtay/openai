@@ -10,6 +10,11 @@ from keras.objectives import mean_squared_error
 from keras.layers import Dense, InputLayer
 
 
+"""
+An implementation of Q-learning for the cartpole environment.
+Based on this gist https://gist.github.com/isseu/7c295d4d2b46e5d9a18dd845ef07dcb9
+"""
+
 
 # Q-learning parameters
 #==========================================================================
