@@ -23,10 +23,10 @@ Based on this gist https://gist.github.com/isseu/7c295d4d2b46e5d9a18dd845ef07dcb
 MAX_REPLAY_STATES = 1000
 
 # number of random samples from replay memory to train on each iteration
-BATCH_SIZE = 128
+BATCH_SIZE = 32
 
 # number of games to play
-NUM_GAMES_TRAIN = 100
+NUM_GAMES_TRAIN = 200
 
 # number of environment observations that constitue a "state"
 OBSERVATIONS_PER_STATE = 1
@@ -157,7 +157,6 @@ for igame in range(NUM_GAMES_TRAIN):
             Y_train[ii,:] = update_target
 
         loss += model.train_on_batch(X_train, Y_train)
-
 
 
     print("[+] End Game {} | Reward {} | Epsilon {:.4f} | TrainPerGame {} | Loss {:.4f} ".format(
